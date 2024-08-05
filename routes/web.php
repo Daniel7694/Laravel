@@ -20,48 +20,12 @@ Route::get('/post/{post}', [PostController::class, 'show'] );
 });*/
 
 Route::get('prueba', function(){
-    /*
-    Crear nuevo post   
-
-  $post = new Post;
-
-  $post->title = 'TíTuLo prueBA 4';
-  $post->content = 'Contenido prueba 4';
-  $post->categorias = 'Categoria prueba 4';
-
-  $post->save();
-
-  return $post;
-*/
-
-   $post = Post::find(4); 
-
-   return $post;
-
-/*
-    Actualizar registro
-  $post = Post::where('title', 'Título prueba 2')
-        ->first();
-  $post->categorias = 'Desarrollo web';
-  $post->save();
-
-  return $post;
-  */
-/*
-Listar post
-  $post = Post::orderBy('categorias', 'ASC')
-                ->take(2)
-                ->get();
-
-  return $post; */
 
 
-  
-  //Eliminar registro
+   $post = Post::find(1); 
 
-  $post = Post::find(2);
-  $post->delete();
+   dd($post->is_active);
 
-  return $post;
+
 
 });
