@@ -21,20 +21,22 @@ Route::get('/post/{post}', [PostController::class, 'show'] );
 
 Route::get('prueba', function(){
     /*
-    Crear nuevo post
+    Crear nuevo post   
 
   $post = new Post;
 
-  $post->title = 'Título prueba 3';
-  $post->content = 'Contenido prueba 3';
-  $post->categorias = 'Categoria prueba 3';
+  $post->title = 'TíTuLo prueBA 4';
+  $post->content = 'Contenido prueba 4';
+  $post->categorias = 'Categoria prueba 4';
 
   $post->save();
 
   return $post;
-  */
+*/
 
-  /* $post = Post::find(1); */
+   $post = Post::find(4); 
+
+   return $post;
 
 /*
     Actualizar registro
