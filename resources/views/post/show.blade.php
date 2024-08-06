@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <a href="/post">
+    <a href="{{route('post.index')}}">
     Volver
     </a>
     <h1>Title: {{$post->title}} </h1>
@@ -19,11 +19,11 @@
         <b>Category: </b>{{$post->category}}
     </p>
 
-    <a href="/post/{{$post->id}}/edit">Editar post</a>
+    <a href="{{route('post.edit', $post)}}">Editar post</a>
 
  <br><br>
 
-    <form action="/post/{{$post->id}}" method="post">
+    <form action="{{route('post.destroy', $post)}}" method="post">
         @method('DELETE')
         @csrf
         <input type="submit" value="Eliminar post">
