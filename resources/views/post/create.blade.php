@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel 11 create</title>
-</head>
-<body>
-    <h1>Aqui se mostrara el formulario para crear un nuevo post</h1>
-</body>
-</html>
+<x-app-layout>
+    <h1>Formulario para crear un nuevo post</h1>
+
+    <form action="/post" method="POST">
+
+        @csrf
+
+        <label for="title">Título: 
+            <input type="text" id="title" name="title">
+        </label>
+
+
+        <br>
+        <br>
+
+        <label for="content">Contenido: 
+            <textarea id="content" name="content"></textarea>
+        </label>
+
+
+        <br>
+        <br>
+
+        <label for="category">Categoría: 
+            <input type="text" id="category" name="category">
+        </label>
+
+
+        <br>
+        <br>
+
+        <button type="submit">Crear post</button>
+
+    </form>
+</x-app-layout>
