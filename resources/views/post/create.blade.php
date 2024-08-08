@@ -1,6 +1,8 @@
 <x-app-layout>
     <h1>Formulario para crear un nuevo post</h1>
 
+
+
     @if ($errors->any())
         
         <div>
