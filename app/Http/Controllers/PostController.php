@@ -22,6 +22,13 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|min:5 | max:255',
+            'slug' => 'required|unique:post',
+            'content' => 'required',
+            'category' => 'required'
+
+        ]);
 
         Post::create($request->all());
 
@@ -41,8 +48,15 @@ class PostController extends Controller
 
     public function update(Request $request,Post $post){
 
+        $request->validate([
+            'title' => 'required|min:5 | max:255',
+            'slug' => "required|unique:post,slug,{$post->id}",
+            'content' => 'required',
+            'category' => 'required'
 
- $post->update($request->all());
+        ]);
+
+        $post->update($request->all());
 
         return redirect()->route('post.show', $post);
         
