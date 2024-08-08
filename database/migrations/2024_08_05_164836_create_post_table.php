@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->longText('slug')->unique();
             $table->longText('content');
             $table->string('category');
             $table->timestamp('published_at')->nullable();

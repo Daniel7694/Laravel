@@ -9,7 +9,7 @@ use App\Models\Post;
 Route::get('/', [HomeController::class, 'index'] );
 
 
-Route::apiResource('post', PostController::class);
+Route::resource('post', PostController::class);
 
 /*Route::get('/post/{post}/{category}', function ($post, $category) {
     return "Aqui se mostraran todos los {$post}, con la categoria {$category}";

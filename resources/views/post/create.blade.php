@@ -13,6 +13,15 @@
         <br>
         <br>
 
+        <label for="slug">Slug: 
+            <input type="text" id="title" name="slug">
+        </label>
+
+
+        <br>
+        <br>
+
+
         <label for="content">Contenido: 
             <textarea id="content" name="content"></textarea>
         </label>
