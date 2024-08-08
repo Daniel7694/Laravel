@@ -12,6 +12,10 @@ class Post extends Model
 
     protected $table = 'post';
 
+    protected $guarded = [
+        'is_active',
+    ];
+
     protected function casts(): array
     {
         return [
